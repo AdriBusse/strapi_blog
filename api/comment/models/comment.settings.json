@@ -13,7 +13,8 @@
   "pluginOptions": {},
   "attributes": {
     "body": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "article": {
       "via": "comments",

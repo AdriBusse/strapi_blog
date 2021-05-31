@@ -47,6 +47,22 @@
       "config": {
         "policies": []
       }
+    },
+    {
+      "method": "POST",
+      "path": "/articles/r/:id",
+      "handler": "article.react",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/articles/c/:id",
+      "handler": "article.comment",
+      "config": {
+        "policies": []
+      }
     }
   ]
 }

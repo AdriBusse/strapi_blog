@@ -13,10 +13,12 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "body": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     },
     "thumbnail": {
       "collection": "file",
@@ -45,6 +47,9 @@
     "category": {
       "via": "articles",
       "model": "category"
+    },
+    "tags": {
+      "type": "string"
     }
   }
 }

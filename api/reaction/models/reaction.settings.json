@@ -24,7 +24,7 @@
       "via": "reactions",
       "model": "article"
     },
-    "users_permissions_user": {
+    "user": {
       "plugin": "users-permissions",
       "model": "user"
     }
