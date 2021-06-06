@@ -1,8 +1,10 @@
-'use strict';
+module.exports = {
+    lifecycles: {
+        beforeCreate: async (data) => {
+            if (!data.describtion) {
+                data.describtion = data.title;
+            }
+        },
 
-/**
- * Read the documentation (https://strapi.io/documentation/developer-docs/latest/development/backend-customization.html#lifecycle-hooks)
- * to customize this model
- */
-
-module.exports = {};
+    },
+};

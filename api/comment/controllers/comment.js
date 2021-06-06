@@ -1,8 +1,21 @@
-'use strict';
+const { sanitizeEntity } = require('strapi-utils');
+module.exports = {
+    /**
+     * Delete a record.
+     *
+     * @return {Object}
+     */
 
-/**
- * Read the documentation (https://strapi.io/documentation/developer-docs/latest/development/backend-customization.html#core-controllers)
- * to customize this controller
- */
+    async delete(ctx) {
+        const { id } = ctx.params;
 
-module.exports = {};
+        const entity = await strapi.services.comment.delete({ id, user: ctx.state.user });
+        if (entity) {
+            console.log("has entity");
+            return sanitizeEntity(entity, { model: strapi.models.comment });
+        } else {
+            console.log("didnt find");
+            return { msg: "you can just delete your own comment" };
+        }
+    },
+};

@@ -27,6 +27,9 @@ module.exports = {
     },
 
     async react(ctx) {
+
+        const oldReaction = await strapi.services.reaction.delete({ article: ctx.params.id, user: ctx.state.user.id });
+
         let entity;
         if (ctx.is('multipart')) {
             const { data, files } = parseMultipartData(ctx);
